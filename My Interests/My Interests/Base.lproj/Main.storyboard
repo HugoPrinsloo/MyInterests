@@ -12,7 +12,6 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="My_Interests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -31,28 +30,13 @@
                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Wg-da-4IK" customClass="FeedCell" customModule="My_Interests" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCell" id="1Wg-da-4IK" customClass="FeaturedCell" customModule="My_Interests" customModuleProvider="target">
                                         <rect key="frame" x="16" y="10" width="300" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgN-U8-hN5">
-                                                    <rect key="frame" x="8" y="28" width="284" height="194"/>
-                                                    <color key="backgroundColor" red="0.78823529410000004" green="0.67450980390000004" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </imageView>
-                                            </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="dgN-U8-hN5" firstAttribute="top" secondItem="1Wg-da-4IK" secondAttribute="topMargin" id="68T-4T-r0D"/>
-                                            <constraint firstItem="dgN-U8-hN5" firstAttribute="leading" secondItem="1Wg-da-4IK" secondAttribute="leadingMargin" id="aDI-C4-8bv"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="dgN-U8-hN5" secondAttribute="trailing" id="xP0-OI-uQd"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="dgN-U8-hN5" secondAttribute="bottom" id="y06-FE-vvC"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="image" destination="dgN-U8-hN5" id="K6T-0Q-u4y"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -104,6 +88,7 @@
                         <outlet property="listCollectionView" destination="ImO-k9-D2P" id="5Ed-nw-Jem"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1668" y="-501.49925037481262"/>
         </scene>
@@ -113,6 +98,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Bb8-L7-Ddi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="5Md-AG-PfO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
