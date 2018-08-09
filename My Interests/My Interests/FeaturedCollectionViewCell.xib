@@ -58,6 +58,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="thumbnail" destination="5i6-yP-u2T" id="euc-Wd-zz7"/>
+                <outlet property="titleLabel" destination="7Kg-Ol-Jby" id="TCy-aH-QgX"/>
             </connections>
             <point key="canvasLocation" x="230" y="157.5"/>
         </collectionViewCell>

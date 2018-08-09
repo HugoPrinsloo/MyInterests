@@ -19,6 +19,7 @@
 		6E3C8230211C61AC0079045E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C822F211C61AC0079045E /* Note.swift */; };
 		6EE44C9B211C6E1A00CBC933 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE44C99211C6E1A00CBC933 /* FeaturedCell.swift */; };
 		6EE44C9C211C6E1A00CBC933 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE44C9A211C6E1A00CBC933 /* FeaturedCollectionViewCell.xib */; };
+		6EE44CA0211C779600CBC933 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE44C9F211C779600CBC933 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		6E3C822F211C61AC0079045E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		6EE44C99211C6E1A00CBC933 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 		6EE44C9A211C6E1A00CBC933 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		6EE44C9D211C779200CBC933 /* My Interests.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My Interests.entitlements"; sourceTree = "<group>"; };
+		6EE44C9F211C779600CBC933 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE44CA0211C779600CBC933 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				6E3C8210211C4CE30079045E /* My InterestsTests */,
 				6E3C821B211C4CE30079045E /* My InterestsUITests */,
 				6E3C81FA211C4CE30079045E /* Products */,
+				6EE44C9E211C779600CBC933 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +112,7 @@
 		6E3C81FB211C4CE30079045E /* My Interests */ = {
 			isa = PBXGroup;
 			children = (
+				6EE44C9D211C779200CBC933 /* My Interests.entitlements */,
 				6E3C81FC211C4CE30079045E /* AppDelegate.swift */,
 				6E3C822E211C61960079045E /* ViewControllers */,
 				6E3C822F211C61AC0079045E /* Note.swift */,
@@ -146,6 +152,14 @@
 				6E3C822C211C52D20079045E /* UserViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6EE44C9E211C779600CBC933 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EE44C9F211C779600CBC933 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +230,14 @@
 				TargetAttributes = {
 					6E3C81F8211C4CE30079045E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					6E3C820C211C4CE30079045E = {
 						CreatedOnToolsVersion = 10.0;
@@ -460,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Interests/My Interests.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = "My Interests/Info.plist";
@@ -478,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Interests/My Interests.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = "My Interests/Info.plist";

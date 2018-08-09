@@ -40,52 +40,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTN-bi-Nk7">
-                                <rect key="frame" x="16" y="334" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-k9-D2P">
-                                <rect key="frame" x="0.0" y="371" width="375" height="247"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jye-iZ-44W">
-                                    <size key="itemSize" width="300" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8M6-wR-tEL" customClass="FeedCell" customModule="My_Interests" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="16" width="300" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.99215686270000003" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QDF-jF-0lg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5cm-cj-gX4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ImO-k9-D2P" secondAttribute="bottom" id="8vb-Rz-pJO"/>
-                            <constraint firstItem="ImO-k9-D2P" firstAttribute="top" secondItem="zTN-bi-Nk7" secondAttribute="bottom" constant="16" id="Eoi-wQ-7DP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ImO-k9-D2P" secondAttribute="trailing" id="V8N-Bw-LyZ"/>
                             <constraint firstItem="QDF-jF-0lg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jUY-Pd-KyC"/>
-                            <constraint firstItem="ImO-k9-D2P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="srT-E1-S1s"/>
-                            <constraint firstItem="zTN-bi-Nk7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uEC-wO-PeC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QDF-jF-0lg" secondAttribute="trailing" id="v30-SG-50I"/>
-                            <constraint firstItem="zTN-bi-Nk7" firstAttribute="top" secondItem="QDF-jF-0lg" secondAttribute="bottom" constant="20" id="yVL-Hj-UAc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="FOb-sv-DYi"/>
                     <connections>
                         <outlet property="featuredCollectionView" destination="QDF-jF-0lg" id="C9n-t9-JyZ"/>
-                        <outlet property="listCollectionView" destination="ImO-k9-D2P" id="5Ed-nw-Jem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

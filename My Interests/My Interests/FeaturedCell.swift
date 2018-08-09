@@ -11,6 +11,7 @@ import UIKit
 class FeaturedCell: UICollectionViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +19,9 @@ class FeaturedCell: UICollectionViewCell {
     }
     
     public func configure(_ note: Note) {
-        thumbnail.image = note.thumbnail
+        let image = UIImage().convertBase64ToImage(imageString: note.thumbnail)
+        thumbnail.image = image
+        titleLabel.text = note.title
     }
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 struct DummyData {
     static let items: [Note] = [Note(title: "Note 1", thumbnail: UIImage(named: "PHOTO1")!, text: "My First photo", url: "", images: []),
@@ -18,7 +19,15 @@ struct DummyData {
 
 class HomeViewController: UIViewController {
     
-    private var items: [Note] = DummyData.items
+    private let manager = NoteMangager()
+    
+    private var items: [Note] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.featuredCollectionView.reloadData()
+            }
+        }
+    }
     
     @IBOutlet weak var featuredCollectionView: UICollectionView!
     @IBOutlet weak var listCollectionView: UICollectionView!
@@ -29,7 +38,17 @@ class HomeViewController: UIViewController {
         featuredCollectionView.register(UINib(nibName: "FeaturedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCell")
         featuredCollectionView.dataSource = self
         featuredCollectionView.delegate = self
+        manager.fetch { (notes) in
+            self.items = notes
+            print("Fetched \(notes.count) items")
+        }
+//        for item in items {
+//            mangager.add(item)
+//        }
+//        mangager.add()
+        
     }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
